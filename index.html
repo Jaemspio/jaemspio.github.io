@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>4 Souls Card Creator</title>
+        <style>
+            @font-face {
+                font-family: BodyFont;
+                src: url('Fonts/Font_soulsV2_Body-Regular.ttf');
+            }
+            @font-face {
+                font-family: TitleFont;
+                src: url('Fonts/Font_soulsV2_Title-Regular.ttf');
+            }
+            @font-face {
+                font-family: EndFont;
+                src: url('Fonts/TheEnd_v2.ttf');
+            }
+            @media (max-width: 600px) {
+                .wrapper {
+                    flex-direction: column;
+                    flex-grow: 0;
+                }
+            }
+            input[type="checkbox"] {
+                vertical-align: top;
+            }
+            .wrapper {
+                display: flex;
+                gap: 8px;
+                margin: 0;
+            }
+            .card {
+                border: 2px solid black;
+                border-radius: 10px;
+            }
+            textarea {
+                resize: none;
+                vertical-align: top;
+                border-radius: 4px;
+            }
+            select {
+                border-radius: 4px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <canvas class="card" width="439" height="614">Your browser does not support the canvas tag.</canvas>
+            <div id="settings">
+                <label for="type">Card Type: </label>
+                <select id="type">
+                    <option value="character">Character</option>
+                    <option value="eternal-active">Eternal Active</option>
+                    <option value="eternal-passive">Eternal Passive</option>
+                    <option value="item-active">Active Item</option>
+                    <option value="item-passive">Passive Item</option>
+                    <option value="loot">Loot Card</option>
+                    <option value="loot-trinket">Trinket</option>
+                    <option value="monster">Monster</option>
+                </select><br>
+                <div class="all">
+                    <label for="title">Card Name: </label>
+                    <textarea id="title" rows="1" cols="18" maxlength="18"></textarea><br>
+                    <label for="file">Image: </label>
+                    <button id="file" type="button">Upload File</button>
+                    <label for="scaled">Scale to fit? </label>
+                    <input id="scaled" type="checkbox" checked="true"><br>
+                </div>
+                <div class="eternal-active eternal-passive item-active item-passive">
+                    <label for="requiem">Use Requiem Backdrop? </label>
+                    <input id="requiem" type="checkbox"><br>
+                </div>
+                <div class="monster">
+                    <label for="floor">Floor Type: </label>
+                    <select id="floor">
+                        <option value="blank">None</option>
+                        <option value="basement">Basement</option>
+                        <option value="cathedral">Cathedral</option>
+                        <option value="caves">Caves</option>
+                        <option value="home">Home</option>
+                        <option value="corpse">Corpse</option>
+                        <option value="cursed">Cursed</option>
+                        <option value="depths">Depths</option>
+                        <option value="downpour">Downpour</option>
+                        <option value="dross">Dross</option>
+                        <option value="hell">Hell</option>
+                        <option value="holy">Holy</option>
+                        <option value="mausoleum">Mausoleum</option>
+                        <option value="mines">Mines</option>
+                        <option value="womb">Womb</option>
+                    </select><br>
+                    <label for="m-health">Health: </label>
+                    <textarea id="m-health" rows="1" cols="1" maxlength="1"></textarea><br>
+                    <label for="m-dice">Dice: </label>
+                    <textarea id="m-dice" rows="1" cols="1" maxlength="1"></textarea><br>
+                    <label for="m-damage">Damage: </label>
+                    <textarea id="m-damage" rows="1" cols="1" maxlength="1"></textarea><br>
+                    <label for="reward">Reward: </label>
+                    <textarea id="reward" rows="1" cols="18" maxlength="18"></textarea><br>
+                </div>
+                <div class="character">
+                    <label for="health">Health: </label>
+                    <textarea id="health" rows="1" cols="1" maxlength="1"></textarea><br>
+                    <label for="damage">Strength: </label>
+                    <textarea id="damage" rows="1" cols="1" maxlength="1"></textarea><br>
+                </div>
+                <div class="all">
+                    <label for="body">Text: </label><br>
+                    <textarea id="body" rows="7" cols="24" spellcheck="false"></textarea><br>
+                    <label for="credits">Credit: </label>
+                    <input id="credits" type="checkbox" checked="true"><br>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
