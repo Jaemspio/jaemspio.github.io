@@ -392,3 +392,15 @@ $("#file").click(async () => {
     if (file) {imageUrl = URL.createObjectURL(file)}
     updateCard()
 })
+
+$("#download").click(() => {
+    const link = document.createElement("a")
+    link.download = "card.png"
+    link.href = card.toDataURL()
+    link.style.display = "none"
+    body.append(link)
+    link.click()
+    setTimeout(() => {
+        link.remove()
+    }, 0)
+})
