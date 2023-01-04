@@ -288,9 +288,9 @@ function updateType() {
     const selected = $("#type").find(":selected").val()
     $("#settings > div").each((i, v) => {
         if (v.classList.contains("all") || v.classList.contains(selected)) {
-            v.style.display = "block"
+            v.hidden = false
         } else {
-            v.style.display = "none"
+            v.hidden = true
             const children = v.children
             for (let i = 0; i < children.length; i++) {
                 const child = children[i]
