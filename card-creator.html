@@ -35,6 +35,43 @@
                 border: 2px solid black;
                 border-radius: 10px;
             }
+            .info {
+                background-color: grey;
+                border-radius: 100%;
+                width: 14px;
+                height: 14px;
+                color: white;
+                text-align: center;
+                vertical-align: top;
+                font-size: 13px;
+                overflow: visible;
+            }
+            .info:hover > .info-textbox {
+                visibility: visible;
+                opacity: 100%;
+                position: relative;
+            }
+            .info-textbox {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 150ms;
+                background-color: rgb(95, 95, 95);
+                padding: 3px;
+                height: fit-content;
+                position: absolute;
+                left: 18px;
+                bottom: 16px;
+            }
+            .info-textbox#icons {
+                width: 260px;
+            }
+            .info-textbox#souls {
+                width: 120px;
+            }
+            .text-wrapper {
+                display: flex;
+                gap: 4px;
+            }
             textarea {
                 resize: none;
                 vertical-align: top;
@@ -98,8 +135,20 @@
                     <textarea id="m-dice" rows="1" cols="1" maxlength="1"></textarea><br>
                     <label for="m-damage">Damage: </label>
                     <textarea id="m-damage" rows="1" cols="1" maxlength="1"></textarea><br>
-                    <label for="reward">Reward: </label>
-                    <textarea id="reward" rows="1" cols="18" maxlength="18"></textarea><br>
+                    <div class="text-wrapper">
+                        <label for="reward">Reward: </label>
+                        <textarea id="reward" rows="1" cols="18" maxlength="18"></textarea><br>
+                        <div class="info">
+                            ?
+                            <div class="info-textbox" id="souls">
+                                <span>
+                                    Special Characters:<br>
+                                    [s] = +1 Soul.<br>
+                                    [s2] = +2 Souls.<br>
+                                </span>
+                            </div>
+                        </div><br>
+                    </div>
                 </div>
                 <div class="character">
                     <label for="health">Health: </label>
@@ -109,7 +158,23 @@
                 </div>
                 <div class="all">
                     <label for="body">Text: </label><br>
-                    <textarea id="body" rows="7" cols="24" spellcheck="false"></textarea><br>
+                    <div class="text-wrapper">
+                        <textarea id="body" rows="7" cols="24" spellcheck="false"></textarea>
+                        <div class="info">
+                            ?
+                            <div class="info-textbox" id="icons">
+                                <span>Special Characters:<br>
+                                    [tap] = Add the tap icon at the start of the line.<br>
+                                    [stap] = The Steven version of the tap icon.<br>
+                                    [line] = Creates a grey line that goes across the card (can't be the first line).<br>
+                                    [bline] = A black line that goes across the card.<br>
+                                    [c] = Represent the cent symbol (¢).<br>
+                                    g+ = Makes the line grey.<br>
+                                    f20 = Set the font size for the line to 20.<br>
+                                </span>
+                            </div>
+                        </div><br>
+                    </div>
                     <label for="credits">Credit: </label>
                     <input id="credits" type="checkbox" checked="true"><br>
                     <button id="download" type="button">Download as .png</button>

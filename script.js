@@ -216,10 +216,10 @@ async function updateCard() {
         let line = lines[i]
         line = wrapText(line, 27)
         let size = 30
-        if ((line == "[line]" || line == "[bline]") && i > 0) {
+        if ((line.trim() == "[line]" || line.trim() == "[bline]") && i > 0) {
             fCtx.strokeStyle = "rgba(1, 1, 1, 0.25)"
             if (line == "[bline]") {fCtx.strokeStyle = "rgb(0, 0, 0)"}
-            height += 10
+            height += 4
             fCtx.lineWidth = 3
             fCtx.lineCap = "round"
             fCtx.beginPath()
@@ -309,12 +309,12 @@ $(() => {
     updateType()
 })
 
-$(".card").on("mousedown", (e) => {
+/* $(".card").on("mousedown", (e) => {
     const pos = getMouseClickPos(card, e)
     fCtx.font = "8px Arial"
     fCtx.fillText("(" + pos.x + ", " + pos.y + ")", pos.x, pos.y)
     console.log(pos.x, pos.y)
-})
+}) */
 
 $("#type").change((e) => {
     updateType()
