@@ -129,8 +129,7 @@ function wrapText(str = "", max = 10) { // This function was hell to get working
 let imageUrl
 
 async function updateCard() {
-    fCtx.fillStyle = "white"
-    fCtx.fillRect(0, 0, 2000, 2000)
+    fCtx.clearRect(0, 0, 2000, 2000)
     fCtx.fillStyle = "black"
     const selected = $("#type").find(":selected").val()
     const image = backgrounds[selected] || backgrounds["character"]
