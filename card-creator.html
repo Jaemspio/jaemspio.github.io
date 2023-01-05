@@ -80,6 +80,9 @@
             select {
                 border-radius: 4px;
             }
+            button {
+                margin: 2px;
+            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </head>
@@ -87,18 +90,18 @@
         <div class="wrapper">
             <canvas class="card" width="439" height="614">Your browser does not support the canvas tag.</canvas>
             <div id="settings">
-                <label for="type">Card Type: </label>
-                <select id="type">
-                    <option value="character">Character</option>
-                    <option value="eternal-active">Eternal Active</option>
-                    <option value="eternal-passive">Eternal Passive</option>
-                    <option value="item-active">Active Item</option>
-                    <option value="item-passive">Passive Item</option>
-                    <option value="loot">Loot Card</option>
-                    <option value="loot-trinket">Trinket</option>
-                    <option value="monster">Monster</option>
-                </select><br>
                 <div class="all">
+                    <label for="type">Card Type: </label>
+                    <select id="type">
+                        <option value="character">Character</option>
+                        <option value="eternal-active">Eternal Active</option>
+                        <option value="eternal-passive">Eternal Passive</option>
+                        <option value="item-active">Active Item</option>
+                        <option value="item-passive">Passive Item</option>
+                        <option value="loot">Loot Card</option>
+                        <option value="loot-trinket">Trinket</option>
+                        <option value="monster">Monster</option>
+                    </select><br>
                     <label for="title">Card Name: </label>
                     <textarea id="title" rows="1" cols="18" maxlength="18"></textarea><br>
                     <label for="file">Image: </label>
@@ -178,7 +181,9 @@
                     </div>
                     <label for="credits">Credit: </label>
                     <input id="credits" type="checkbox" checked="true"><br>
-                    <button id="download" type="button">Download as .png</button>
+                    <button id="download" type="button">Download as .png</button><br>
+                    <button id="download-card" type="button">Download as .card</button><br>
+                    <button id="import-card" type="button">Import .card</button><br>
                 </div>
             </div>
         </div>

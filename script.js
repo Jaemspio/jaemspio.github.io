@@ -386,15 +386,63 @@ $("#reward").on("input", () => {
 })
 
 $("#file").click(async () => {
-    if (imageUrl) {URL.revokeObjectURL(imageUrl); imageUrl = null} // To prevent memory leaks
     const file = await promptUpload("image/*")
-    if (file) {imageUrl = URL.createObjectURL(file)}
-    updateCard()
+    if (file) {
+        const fr = new FileReader()
+        fr.onload = e => {
+            imageUrl = e.target.result
+            updateCard()
+        }
+        fr.readAsDataURL(file)
+    }
 })
+
+function getName() {
+    const value = $("#title").val()
+    return value.toLowerCase().replaceAll(" ", "-")
+}
+
+function saveCard() {
+    let ret = {
+        textarea: {},
+        input: {},
+        select: {},
+        png: imageUrl,
+    }
+    $("#settings > div *").each((i, v) => {
+        if (!v.parentNode.hidden) {
+            const node = v.nodeName.toLowerCase()
+            if (ret[node]) {
+                if (v.checked === undefined) {
+                    ret[node][v.id] = v.value
+                } else {
+                    ret[node][v.id] = v.checked
+                }
+            }
+        }
+    })
+    return JSON.stringify(ret)
+}
+
+function loadCard(str) {
+    const data = JSON.parse(str)
+    for (let node in data) {
+        $(`#settings > div ${node}`).each((i, v) => {
+            if (data[node][v.id] && v.checked === undefined) {
+                v.value = data[node][v.id]
+            } else {
+                v.checked = data[node][v.id]
+            }
+        })
+    }
+    if (data.png) {imageUrl = data.png}
+    updateType()
+    updateCard()
+}
 
 $("#download").click(() => {
     const link = document.createElement("a")
-    link.download = "card.png"
+    link.download = `${getName()}.png`
     link.href = card.toDataURL()
     link.style.display = "none"
     body.append(link)
@@ -402,4 +450,29 @@ $("#download").click(() => {
     setTimeout(() => {
         link.remove()
     }, 0)
+})
+
+$("#download-card").click(() => {
+    const link = document.createElement("a")
+    const name = `${getName() || "blank"}.card`
+    link.download = name
+    link.href = URL.createObjectURL(new File([saveCard()], name))
+    link.style.display = "none"
+    body.append(link)
+    link.click()
+    setTimeout(() => {
+        URL.revokeObjectURL(link.href)
+        link.remove()
+    }, 0)
+})
+
+$("#import-card").click(async () => {
+    const file = await promptUpload(".card")
+    if (file) {
+        const fr = new FileReader()
+        fr.onload = e => {
+            loadCard(e.target.result)
+        }
+        fr.readAsText(file)
+    }
 })
