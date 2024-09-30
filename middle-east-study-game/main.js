@@ -181,10 +181,10 @@ function initGame(options) {
     $("#percent").text("Correct: 0/0")
     $("#writing-prompt label").text("Type the name of this country: ")
     $("#answer").text("")
-    writing = options.writingMode ? options.writingMode : writing
-    capitals = options.capitals ? options.capitals : capitals
-    landforms = options.landforms ? options.landforms : landforms
-    skipCountries = options.skipCountries ? options.skipCountries : skipCountries
+    writing = options.writingMode !== undefined ? options.writingMode : writing
+    capitals = options.capitals !== undefined ? options.capitals : capitals
+    landforms = options.landforms !== undefined ? options.landforms : landforms
+    skipCountries = options.skipCountries !== undefined ? options.skipCountries : skipCountries
     if (writing) {
         for (let country of countries) {
             country.classList.add("inactive")
