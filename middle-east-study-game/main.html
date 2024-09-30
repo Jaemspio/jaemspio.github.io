@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="main.js" defer></script>
+    <title>Middle East Study Tool</title>
+</head>
+<body>
+    <div class="scene" id="menu">
+        <p class="title">Middle East/North Africa Map Game</p>
+        <div class="options">
+            <button>Play</button>
+            <div class="option">
+                <label for="capitals">Capitals: </label>
+                <input type="checkbox" id="capitals" name="capitals">
+            </div>
+            <div class="option">
+                <label for="landforms">Landforms: </label>
+                <input type="checkbox" id="landforms" name="landforms">
+            </div>
+            <div class="option">
+                <label for="skip">Skip Countries: </label>
+                <input type="checkbox" id="skip" name="skip">
+            </div>
+            <div class="option">
+                <label for="writing">Writing Mode: </label>
+                <input type="checkbox" id="writing" name="writing">
+            </div>
+        </div>
+    </div>
+    <div class="scene" id="game" style="display: none;">
+        <div class="stats">
+            <p class="stat" id="time">Time: 0:00</p>
+            <p class="stat" id="percent" style="text-align: right;">Correct: 0/0</p>
+        </div>
+        <div class="map">
+            <img src="sprites/blank_world_map.png" class="background">
+            <img src="sprites/afghanistan.png" id="afghanistan" class="country">
+            <img src="sprites/algeria.png" id="algeria" class="country">
+            <img src="sprites/bahrain.png" id="bahrain" class="country small">
+            <img src="sprites/egypt.png" id="egypt" class="country">
+            <img src="sprites/iran.png" id="iran" class="country">
+            <img src="sprites/iraq.png" id="iraq" class="country">
+            <img src="sprites/israel.png" id="israel" class="country">
+            <img src="sprites/jordan.png" id="jordan" class="country">
+            <img src="sprites/kuwait.png" id="kuwait" class="country small">
+            <img src="sprites/libya.png" id="libya" class="country">
+            <img src="sprites/morocco.png" id="morocco" class="country">
+            <img src="sprites/oman.png" id="oman" class="country">
+            <img src="sprites/qatar.png" id="qatar" class="country small">
+            <img src="sprites/saudi_arabia.png" id="saudi_arabia" class="country">
+            <img src="sprites/syria.png" id="syria" class="country">
+            <img src="sprites/lebanon.png" id="lebanon" class="country small">
+            <img src="sprites/tunisia.png" id="tunisia" class="country">
+            <img src="sprites/turkey.png" id="turkey" class="country">
+            <img src="sprites/uae.png" id="uae" class="country">
+            <img src="sprites/yemen.png" id="yemen" class="country">
+            <img src="sprites/nile_river.png" id="nile_river" class="landform">
+            <img src="sprites/tigris_river.png" id="tigris_river" class="landform">
+            <img src="sprites/euphrates_river.png" id="euphrates_river" class="landform">
+            <img src="sprites/mediterranean_sea.png" id="mediterranean_sea" class="landform">
+            <img src="sprites/red_sea.png" id="red_sea" class="landform">
+            <img src="sprites/persian_gulf.png" id="persian_gulf" class="landform">
+            <img src="sprites/oman_gulf.png" id="oman_gulf" class="landform">
+            <img src="sprites/aden_gulf.png" id="aden_gulf" class="landform">
+            <img src="sprites/caspian_sea.png" id="caspian_sea" class="landform">
+            <img src="sprites/black_sea.png" id="black_sea" class="landform">
+        </div>
+        <p id="objective"></p>
+        <div id="writing-prompt" style="display: none;">
+            <label for="writing-box">Type the name of this country: </label>
+            <input type="text" id="writing-box" name="writing-box" spellcheck="false" autocorrect="off" autocomplete="off">
+            <button id="enter">Enter</button>
+        </div>
+        <p id="answer"></p>
+        <dialog>
+            <p id="result-time"></p>
+            <p id="result-percent"></p>
+            <button id="play-again">Play Again</button>
+            <button id="goto-menu">Go to Menu</button>
+        </dialog>
+    </div>
+</body>
+</html>

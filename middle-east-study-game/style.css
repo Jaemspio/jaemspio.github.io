@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html {
+    height: 100vh;
+}
+
+/* @media screen and (max-width: 544px) {
+    .title {
+        color: red;
+    }
+} */
+
+.title {
+    width: 100%;
+    font-family: "Itim", cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 1rem;
+}
+
+.options {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.options > * {
+    display: block;
+    width: fit-content;
+    margin: 0.5rem auto;
+}
+
+.option input {
+    margin: 0;
+}
+
+.stats {
+    width: 544px;
+    margin: auto;
+    display: flex;
+}
+
+#writing-prompt {
+    width: 544px;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+#writing-box {
+    margin: 0 0.2rem;
+}
+
+.stats p {
+    width: 50%;
+    margin: 0.5rem 0;
+}
+
+#objective {
+    width: 544px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.map {
+    outline: solid 2px black;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.country, .landform {
+    position: absolute;
+}
+
+.landform.inactive {
+    display: none;
+}
+
+.country:hover:not(.inactive), .landform:hover:not(.inactive) {
+    filter: sepia(1) saturate(1000000%) hue-rotate(0deg);
+}
+
+.country.show-answer, .landform.show-answer {
+    filter: sepia(1) saturate(1000000%) hue-rotate(-45deg);
+}
+
+.country.show-answer.small {
+    border: solid 1px black;
+}
+
+.country.correct, .landform.correct {
+    filter: sepia(1) saturate(1000000%) hue-rotate(45deg) !important;
+}
+
+.country.incorrect, .landform.incorrect {
+    filter: sepia(1) saturate(1000000%) hue-rotate(-70deg) !important;
+}
+
+.country.chosen, .landform.chosen {
+    filter: sepia(1) saturate(1000000%) hue-rotate(0deg);
+}
+
+.country.small.chosen {
+    border: solid 1px black;
+}
+
+#answer {
+    width: 544px;
+    margin: auto;
+    text-align: center;
+    color: red;
+}
+
+dialog {
+    border-radius: 8px;
+}
+
+#afghanistan {
+    left: 472;
+    top: 33;
+}
+
+#algeria {
+    left: 34;
+    top: 43;
+}
+
+#bahrain {
+    left: 416;
+    top: 118;
+}
+
+#egypt {
+    left: 249;
+    top: 84;
+}
+
+#iran {
+    left: 373;
+    top: 24;
+}
+
+#iraq {
+    left: 338;
+    top: 42;
+}
+
+#israel {
+    left: 310;
+    top: 73;
+}
+
+#jordan {
+    left: 316;
+    top: 73;
+}
+
+#kuwait {
+    left: 392;
+    top: 98;
+}
+
+#lebanon {
+    left: 317;
+    top: 63;
+}
+
+#libya {
+    left: 150;
+    top: 74;
+}
+
+#morocco {
+    left: 16;
+    top: 53;
+}
+
+#oman {
+    left: 431;
+    top: 136;
+}
+
+#qatar {
+    left: 420;
+    top: 130;
+}
+
+#saudi_arabia {
+    left: 315;
+    top: 81;
+}
+
+#syria {
+    left: 317;
+    top: 45;
+}
+
+#tunisia {
+    left: 138;
+    top: 41;
+}
+
+#turkey {
+    left: 254;
+    top: 6;
+}
+
+#uae {
+    left: 428;
+    top: 124;
+}
+
+#yemen {
+    left: 371;
+    top: 180;
+}
+
+#nile_river {
+    left: 285;
+    top: 97;
+}
+
+#tigris_river, #euphrates_river {
+    left: 318;
+    top: 14;
+}
+
+#mediterranean_sea {
+    left: 58;
+    top: 0;
+}
+
+#red_sea {
+    left: 296;
+    top: 96;
+}
+
+#persian_gulf {
+    left: 396;
+    top: 94;
+}
+
+#oman_gulf {
+    left: 454;
+    top: 118;
+}
+
+#aden_gulf {
+    left: 373;
+    top: 205;
+}
+
+#caspian_sea {
+    left: 382;
+    top: 0;
+}
+
+#black_sea {
+    left: 262;
+    top: 0;
+}
