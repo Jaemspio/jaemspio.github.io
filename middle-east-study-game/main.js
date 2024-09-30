@@ -36,7 +36,7 @@ const answerSet = {
         "Kabul": "afghanistan",
         "Algiers": "algeria",
         "Manama": "bahrain",
-        "Egypt": "egypt",
+        "Cairo": "egypt",
         "Tehran": "iran",
         "Baghdad": "iraq",
         "Jerusalem": "israel",
