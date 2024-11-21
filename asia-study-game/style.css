@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html {
+    height: 100vh;
+}
+
+/* @media screen and (max-width: 410px) {
+    .map .background {
+        width: 100vw;
+    }
+} */
+
+.title {
+    width: 100%;
+    font-family: "Itim", cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 1rem;
+}
+
+.options {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.options > * {
+    display: block;
+    width: fit-content;
+    margin: 0.5rem auto;
+}
+
+.option input {
+    margin: 0;
+}
+
+.stats {
+    width: 410px;
+    margin: auto;
+    display: flex;
+}
+
+#writing-prompt {
+    width: 410px;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+#writing-box {
+    margin: 0 0.2rem;
+}
+
+.stats p {
+    width: 50%;
+    margin: 0.5rem 0;
+}
+
+#objective {
+    width: 410px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.map {
+    outline: solid 2px black;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.country, .landform {
+    position: absolute;
+}
+
+.landform.inactive {
+    display: none;
+}
+
+.country:hover:not(.inactive), .landform:hover:not(.inactive) {
+    filter: sepia(1) saturate(1000000%) hue-rotate(0deg);
+}
+
+.country.show-answer, .landform.show-answer {
+    filter: sepia(1) saturate(1000000%) hue-rotate(-45deg);
+}
+
+.country.show-answer.small {
+    border: solid 1px black;
+}
+
+.country.correct, .landform.correct {
+    filter: sepia(1) saturate(1000000%) hue-rotate(45deg) !important;
+}
+
+.country.incorrect, .landform.incorrect {
+    filter: sepia(1) saturate(1000000%) hue-rotate(-70deg) !important;
+}
+
+.country.chosen, .landform.chosen {
+    filter: sepia(1) saturate(1000000%) hue-rotate(0deg);
+}
+
+.country.small.chosen {
+    border: solid 1px black;
+}
+
+#answer {
+    width: 410px;
+    margin: auto;
+    text-align: center;
+    color: red;
+}
+
+dialog {
+    border-radius: 8px;
+}
+
+#bangladesh {
+    left: 208;
+    top: 199;
+}
+
+#bhutan {
+    left: 210;
+    top: 191;
+}
+
+#brunei {
+    left: 303;
+    top: 280;
+}
+
+#cambodia {
+    left: 261;
+    top: 244;
+}
+
+#china {
+    left: 151;
+    top: 98;
+}
+
+#india {
+    left: 147;
+    top: 173;
+}
+
+#indonesia {
+    left: 271;
+    top: 281;
+}
+
+#japan {
+    left: 329;
+    top: 129;
+}
+
+#kazakhstan {
+    left: 63;
+    top: 90;
+}
+
+#kyrgyzstan {
+    left: 140;
+    top: 136;
+}
+
+#laos {
+    left: 251;
+    top: 214;
+}
+
+#malaysia {
+    left: 238;
+    top: 273;
+}
+
+#mongolia {
+    left: 181;
+    top: 103;
+}
+
+#myanmar {
+    left: 224;
+    top: 191;
+}
+
+#nepal {
+    left: 180;
+    top: 183;
+}
+
+#north_korea {
+    left: 306;
+    top: 138;
+}
+
+#pakistan {
+    left: 120;
+    top: 159;
+}
+
+#philippines {
+    left: 310;
+    top: 228;
+}
+
+#russia {
+    left: 3;
+    top: 9;
+}
+
+#singapore {
+    left: 265;
+    top: 288;
+}
+
+#south_korea {
+    left: 318;
+    top: 154;
+}
+
+#sri_lanka {
+    left: 187;
+    top: 261;
+}
+
+#taiwan {
+    left: 313;
+    top: 203;
+}
+
+#tajikistan {
+    left: 134;
+    top: 149;
+}
+
+#thailand {
+    left: 242;
+    top: 221;
+}
+
+#turkmenistan {
+    left: 86;
+    top: 139;
+}
+
+#uzbekistan {
+    left: 94;
+    top: 126;
+}
+
+#vietnam {
+    left: 256;
+    top: 211;
+}
+
+#arabian_sea {
+    left: 92;
+    top: 203;
+}
+
+#bay_of_bengal {
+    left: 184;
+    top: 213;
+}
+
+#chang_jiang_river {
+    left: 198;
+    top: 169;
+}
+
+#ganges_river {
+    left: 174;
+    top: 190;
+}
+
+#gobi_desert {
+    left: 209;
+    top: 119;
+}
+
+#huang_he_river {
+    left: 186;
+    top: 145;
+}
+
+#indus_river {
+    left: 137;
+    top: 169;
+}

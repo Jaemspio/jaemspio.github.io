@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="main.js" defer></script>
+    <title>Asia Study Tool</title>
+</head>
+<body>
+    <div class="scene" id="menu">
+        <p class="title">Asia Map Game</p>
+        <div class="options">
+            <button>Play</button>
+            <div class="option">
+                <label for="capitals">Capitals: </label>
+                <input type="checkbox" id="capitals" name="capitals">
+            </div>
+            <div class="option">
+                <label for="landforms">Landforms: </label>
+                <input type="checkbox" id="landforms" name="landforms">
+            </div>
+            <div class="option">
+                <label for="skip">Skip Countries: </label>
+                <input type="checkbox" id="skip" name="skip">
+            </div>
+            <div class="option">
+                <label for="writing">Writing Mode: </label>
+                <input type="checkbox" id="writing" name="writing">
+            </div>
+        </div>
+    </div>
+    <div class="scene" id="game" style="display: none;">
+        <div class="stats">
+            <p class="stat" id="time">Time: 0:00</p>
+            <p class="stat" id="percent" style="text-align: right;">Correct: 0/0</p>
+        </div>
+        <div class="map">
+            <img src="sprites/blank_world_map.png" class="background">
+            <img src="sprites/bangladesh.png" id="bangladesh" class="country">
+            <img src="sprites/bhutan.png" id="bhutan" class="country">
+            <img src="sprites/brunei.png" id="brunei" class="country small">
+            <img src="sprites/cambodia.png" id="cambodia" class="country">
+            <img src="sprites/china.png" id="china" class="country">
+            <img src="sprites/india.png" id="india" class="country">
+            <img src="sprites/indonesia.png" id="indonesia" class="country">
+            <img src="sprites/japan.png" id="japan" class="country">
+            <img src="sprites/kazakhstan.png" id="kazakhstan" class="country">
+            <img src="sprites/kyrgyzstan.png" id="kyrgyzstan" class="country">
+            <img src="sprites/laos.png" id="laos" class="country">
+            <img src="sprites/malaysia.png" id="malaysia" class="country">
+            <img src="sprites/mongolia.png" id="mongolia" class="country">
+            <img src="sprites/myanmar.png" id="myanmar" class="country">
+            <img src="sprites/nepal.png" id="nepal" class="country">
+            <img src="sprites/north_korea.png" id="north_korea" class="country">
+            <img src="sprites/pakistan.png" id="pakistan" class="country">
+            <img src="sprites/philippines.png" id="philippines" class="country">
+            <img src="sprites/russia.png" id="russia" class="country">
+            <img src="sprites/singapore.png" id="singapore" class="country small">
+            <img src="sprites/south_korea.png" id="south_korea" class="country">
+            <img src="sprites/sri_lanka.png" id="sri_lanka" class="country">
+            <img src="sprites/taiwan.png" id="taiwan" class="country">
+            <img src="sprites/tajikistan.png" id="tajikistan" class="country">
+            <img src="sprites/thailand.png" id="thailand" class="country">
+            <img src="sprites/turkmenistan.png" id="turkmenistan" class="country">
+            <img src="sprites/uzbekistan.png" id="uzbekistan" class="country">
+            <img src="sprites/vietnam.png" id="vietnam" class="country">
+            <img src="sprites/arabian_sea.png" id="arabian_sea" class="landform">
+            <img src="sprites/bay_of_bengal.png" id="bay_of_bengal" class="landform">
+            <img src="sprites/chang_jiang_river.png" id="chang_jiang_river" class="landform">
+            <img src="sprites/ganges_river.png" id="ganges_river" class="landform">
+            <img src="sprites/gobi_desert.png" id="gobi_desert" class="landform">
+            <img src="sprites/huang_he_river.png" id="huang_he_river" class="landform">
+            <img src="sprites/indus_river.png" id="indus_river" class="landform">
+        </div>
+        <p id="objective"></p>
+        <div id="writing-prompt" style="display: none;">
+            <label for="writing-box">Type the name of this country: </label>
+            <input type="text" id="writing-box" name="writing-box" spellcheck="false" autocorrect="off" autocomplete="off">
+            <button id="enter">Enter</button>
+        </div>
+        <p id="answer"></p>
+        <dialog>
+            <p id="result-time"></p>
+            <p id="result-percent"></p>
+            <button id="play-again">Play Again</button>
+            <button id="goto-menu">Go to Menu</button>
+        </dialog>
+    </div>
+</body>
+</html>
