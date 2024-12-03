@@ -76,6 +76,7 @@ const answerSet = {
         "Chang Jiang River": "chang_jiang_river",
         "Ganges River": "ganges_river",
         "Gobi Desert": "gobi_desert",
+        "Himalayas": "himalayas",
         "Huang-He River": "huang_he_river",
         "Indus River": "indus_river",
     }

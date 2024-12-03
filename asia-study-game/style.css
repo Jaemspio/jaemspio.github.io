@@ -79,11 +79,11 @@ html {
 }
 
 .country:hover:not(.inactive), .landform:hover:not(.inactive) {
-    filter: sepia(1) saturate(1000000%) hue-rotate(0deg);
+    filter: sepia(1) saturate(10000%) hue-rotate(0deg);
 }
 
 .country.show-answer, .landform.show-answer {
-    filter: sepia(1) saturate(1000000%) hue-rotate(-45deg);
+    filter: sepia(1) saturate(10000%) hue-rotate(-45deg);
 }
 
 .country.show-answer.small {
@@ -91,15 +91,15 @@ html {
 }
 
 .country.correct, .landform.correct {
-    filter: sepia(1) saturate(1000000%) hue-rotate(45deg) !important;
+    filter: sepia(1) saturate(10000%) hue-rotate(45deg) !important;
 }
 
 .country.incorrect, .landform.incorrect {
-    filter: sepia(1) saturate(1000000%) hue-rotate(-70deg) !important;
+    filter: sepia(1) saturate(10000%) hue-rotate(-70deg) !important;
 }
 
 .country.chosen, .landform.chosen {
-    filter: sepia(1) saturate(1000000%) hue-rotate(0deg);
+    filter: sepia(1) saturate(10000%) hue-rotate(0deg);
 }
 
 .country.small.chosen {
@@ -280,6 +280,11 @@ dialog {
 #gobi_desert {
     left: 209;
     top: 119;
+}
+
+#himalayas {
+    left: 170;
+    top: 179;
 }
 
 #huang_he_river {
