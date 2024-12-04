@@ -199,6 +199,8 @@ function initGame(options) {
     capitals = options.capitals !== undefined ? options.capitals : capitals
     landforms = options.landforms !== undefined ? options.landforms : landforms
     skipCountries = options.skipCountries !== undefined ? options.skipCountries : skipCountries
+    $("#objective").show()
+    $("#writing-prompt").hide()
     if (writing) {
         for (let country of countries) {
             country.classList.add("inactive")
