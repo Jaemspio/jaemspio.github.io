@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="main.js" defer></script>
+    <title>Europe Study Tool</title>
+</head>
+<body>
+    <div class="scene" id="menu">
+        <p class="title">Europe Map Game</p>
+        <div class="options">
+            <button>Play</button>
+            <div class="option">
+                <label for="capitals">Capitals: </label>
+                <input type="checkbox" id="capitals" name="capitals">
+            </div>
+            <div class="option">
+                <label for="landforms">Landforms: </label>
+                <input type="checkbox" id="landforms" name="landforms">
+            </div>
+            <div class="option">
+                <label for="skip">Skip Countries: </label>
+                <input type="checkbox" id="skip" name="skip">
+            </div>
+            <div class="option">
+                <label for="writing">Writing Mode: </label>
+                <input type="checkbox" id="writing" name="writing">
+            </div>
+        </div>
+    </div>
+    <div class="scene" id="game" style="display: none;">
+        <div class="stats">
+            <p class="stat" id="time">Time: 0:00</p>
+            <p class="stat" id="percent" style="text-align: right;">Correct: 0/0</p>
+        </div>
+        <div class="map">
+            <img src="sprites/blank_world_map.png" class="background">
+            <img src="sprites/iceland.png" id="iceland" class="country">
+            <img src="sprites/ireland.png" id="ireland" class="country">
+            <img src="sprites/uk.png" id="uk" class="country">
+            <img src="sprites/belgium.png" id="belgium" class="country">
+            <img src="sprites/netherlands.png" id="netherlands" class="country">
+            <img src="sprites/france.png" id="france" class="country">
+            <img src="sprites/spain.png" id="spain" class="country">
+            <img src="sprites/portugal.png" id="portugal" class="country">
+            <img src="sprites/luxembourg.png" id="luxembourg" class="country small">
+            <img src="sprites/germany.png" id="germany" class="country">
+            <img src="sprites/denmark.png" id="denmark" class="country">
+            <img src="sprites/poland.png" id="poland" class="country">
+            <img src="sprites/czech_republic.png" id="czech_republic" class="country">
+            <img src="sprites/switzerland.png" id="switzerland" class="country">
+            <img src="sprites/austria.png" id="austria" class="country">
+            <img src="sprites/slovakia.png" id="slovakia" class="country">
+            <img src="sprites/italy.png" id="italy" class="country">
+            <img src="sprites/slovenia.png" id="slovenia" class="country">
+            <img src="sprites/croatia.png" id="croatia" class="country">
+            <img src="sprites/bosnia_herzegovina.png" id="bosnia_herzegovina" class="country">
+            <img src="sprites/hungary.png" id="hungary" class="country">
+            <img src="sprites/serbia.png" id="serbia" class="country">
+            <img src="sprites/montenegro.png" id="montenegro" class="country">
+            <img src="sprites/kosovo.png" id="kosovo" class="country">
+            <img src="sprites/albania.png" id="albania" class="country">
+            <img src="sprites/macedonia.png" id="macedonia" class="country">
+            <img src="sprites/greece.png" id="greece" class="country">
+            <img src="sprites/bulgaria.png" id="bulgaria" class="country">
+            <img src="sprites/romania.png" id="romania" class="country">
+            <img src="sprites/russia.png" id="russia" class="country">
+            <img src="sprites/moldova.png" id="moldova" class="country">
+            <img src="sprites/ukraine.png" id="ukraine" class="country">
+            <img src="sprites/norway.png" id="norway" class="country">
+            <img src="sprites/sweden.png" id="sweden" class="country">
+            <img src="sprites/finland.png" id="finland" class="country">
+            <img src="sprites/sicily.png" id="sicily" class="country">
+            <img src="sprites/turkey.png" id="turkey" class="country">
+            <img src="sprites/belarus.png" id="belarus" class="country">
+            <img src="sprites/lithuania.png" id="lithuania" class="country">
+            <img src="sprites/latvia.png" id="latvia" class="country">
+            <img src="sprites/estonia.png" id="estonia" class="country">
+            <img src="sprites/adriatic_sea.png" id="adriatic_sea" class="landform">
+            <img src="sprites/baltic_sea.png" id="baltic_sea" class="landform">
+            <img src="sprites/danube_river.png" id="danube_river" class="landform">
+            <img src="sprites/alps.png" id="alps" class="landform">
+            <img src="sprites/english_channel.png" id="english_channel" class="landform">
+            <img src="sprites/mediterranean_sea.png" id="mediterranean_sea" class="landform">
+            <img src="sprites/north_sea.png" id="north_sea" class="landform">
+            <img src="sprites/rhine_river.png" id="rhine_river" class="landform">
+            <img src="sprites/seine_river.png" id="seine_river" class="landform">
+            <img src="sprites/thames_river.png" id="thames_river" class="landform">
+        </div>
+        <p id="objective"></p>
+        <div id="writing-prompt" style="display: none;">
+            <label for="writing-box">Type the name of this country: </label>
+            <input type="text" id="writing-box" name="writing-box" spellcheck="false" autocorrect="off" autocomplete="off">
+            <button id="enter">Enter</button>
+        </div>
+        <p id="answer"></p>
+        <dialog>
+            <p id="result-time"></p>
+            <p id="result-percent"></p>
+            <button id="play-again">Play Again</button>
+            <button id="goto-menu">Go to Menu</button>
+        </dialog>
+    </div>
+</body>
+</html>

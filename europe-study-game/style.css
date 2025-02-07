@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html {
+    height: 100vh;
+}
+
+/* @media screen and (max-width: 410px) {
+    .map .background {
+        width: 100vw;
+    }
+} */
+
+.title {
+    width: 100%;
+    font-family: "Itim", cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 1rem;
+}
+
+.options {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.options > * {
+    display: block;
+    width: fit-content;
+    margin: 0.5rem auto;
+}
+
+.option input {
+    margin: 0;
+}
+
+.stats {
+    width: 410px;
+    margin: auto;
+    display: flex;
+}
+
+#writing-prompt {
+    width: 410px;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+#writing-box {
+    margin: 0 0.2rem;
+}
+
+.stats p {
+    width: 50%;
+    margin: 0.5rem 0;
+}
+
+#objective {
+    width: 410px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.map {
+    outline: solid 2px black;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.country, .landform {
+    position: absolute;
+}
+
+.landform.inactive {
+    display: none;
+}
+
+.country:hover:not(.inactive), .landform:hover:not(.inactive) {
+    filter: sepia(1) saturate(10000%) hue-rotate(0deg);
+}
+
+.country.show-answer, .landform.show-answer {
+    filter: sepia(1) saturate(10000%) hue-rotate(-45deg);
+}
+
+.country.show-answer.small {
+    border: solid 1px black;
+}
+
+.country.correct, .landform.correct {
+    filter: sepia(1) saturate(10000%) hue-rotate(45deg) !important;
+}
+
+.country.incorrect, .landform.incorrect {
+    filter: sepia(1) saturate(10000%) hue-rotate(-70deg) !important;
+}
+
+.country.chosen, .landform.chosen {
+    filter: sepia(1) saturate(10000%) hue-rotate(0deg);
+}
+
+.country.small.chosen {
+    border: solid 1px black;
+}
+
+#answer {
+    width: 410px;
+    margin: auto;
+    text-align: center;
+    color: red;
+}
+
+dialog {
+    border-radius: 8px;
+}
+
+#iceland {
+    left: 14;
+    top: 31;
+}
+
+#ireland {
+    left: 72;
+    top: 118;
+}
+
+#uk {
+    left: 86;
+    top: 86;
+}
+
+#belgium {
+    left: 148;
+    top: 138;
+}
+
+#netherlands {
+    left: 156;
+    top: 124;
+}
+
+#france {
+    left: 104;
+    top: 142;
+}
+
+#spain {
+    left: 72;
+    top: 194;
+}
+
+#portugal {
+    left: 70;
+    top: 206;
+}
+
+#luxembourg {
+    left: 162;
+    top: 146;
+}
+
+#germany {
+    left: 166;
+    top: 114;
+}
+
+#denmark {
+    left: 176;
+    top: 94;
+}
+
+#poland {
+    left: 212;
+    top: 114;
+}
+
+#czech_republic {
+    left: 200;
+    top: 142;
+}
+
+#switzerland {
+    left: 168;
+    top: 166;
+}
+
+#austria {
+    left: 196;
+    top: 158;
+}
+
+#slovakia {
+    left: 230;
+    top: 152;
+}
+
+#italy {
+    left: 168;
+    top: 170;
+}
+
+#slovenia {
+    left: 210;
+    top: 174;
+}
+
+#croatia {
+    left: 210;
+    top: 176;
+}
+
+#bosnia_herzegovina {
+    left: 224;
+    top: 184;
+}
+
+#hungary {
+    left: 226;
+    top: 160;
+}
+
+#serbia {
+    left: 242;
+    top: 178;
+}
+
+#montenegro {
+    left: 240;
+    top: 198;
+}
+
+#kosovo {
+    left: 250;
+    top: 200;
+}
+
+#albania {
+    left: 246;
+    top: 204;
+}
+
+#macedonia {
+    left: 252;
+    top: 206;
+}
+
+#greece {
+    left: 248;
+    top: 212;
+}
+
+#bulgaria {
+    left: 264;
+    top: 192;
+}
+
+#romania {
+    left: 252;
+    top: 162;
+}
+
+#russia {
+    left: 246;
+    top: 0;
+}
+
+#moldova {
+    left: 288;
+    top: 160;
+}
+
+#ukraine {
+    left: 260;
+    top: 132;
+}
+
+#norway {
+    left: 164;
+    top: 6;
+}
+
+#sweden {
+    left: 194;
+    top: 18;
+}
+
+#finland {
+    left: 246;
+    top: 12;
+}
+
+#sicily {
+    left: 204;
+    top: 236;
+}
+
+#turkey {
+    left: 288;
+    top: 208;
+}
+
+#belarus {
+    left: 264;
+    top: 106;
+}
+
+#lithuania {
+    left: 250;
+    top: 104;
+}
+
+#latvia {
+    left: 248;
+    top: 92;
+}
+
+#estonia {
+    left: 262;
+    top: 80;
+}
+
+#adriatic_sea {
+    left: 202;
+    top: 180;
+}
+
+#alps {
+    left: 158;
+    top: 158;
+}
+
+#baltic_sea {
+    left: 202;
+    top: 38;
+}
+
+#danube_river {
+    left: 177;
+    top: 170;
+}
+
+#english_channel {
+    left: 96;
+    top: 140;
+}
+
+#mediterranean_sea {
+    left: 216;
+    top: 216;
+}
+
+#north_sea {
+    left: 114;
+    top: 80;
+}
+
+#rhine_river {
+    left: 145;
+    top: 136;
+}
+
+#seine_river {
+    left: 127;
+    top: 150;
+}
+
+#thames_river {
+    left: 127;
+    top: 150;
+}
