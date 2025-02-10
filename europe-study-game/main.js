@@ -68,7 +68,7 @@ const answerSet = {
         "Warsaw": "poland",
         "Prague": "czech_republic",
         "Bern": "switzerland",
-        "Austria": "austria",
+        "Vienna": "austria",
         "Bratislava": "slovakia",
         "Rome": "italy",
         "Ljubljana": "slovenia",
