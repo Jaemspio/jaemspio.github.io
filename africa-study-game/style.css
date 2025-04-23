@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html {
+    height: 100vh;
+}
+
+/* @media screen and (max-width: 410px) {
+    .map .background {
+        width: 100vw;
+    }
+} */
+
+.title {
+    width: 100%;
+    font-family: "Itim", cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20vh;
+    margin-bottom: 1rem;
+}
+
+.options {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.options > * {
+    display: block;
+    width: fit-content;
+    margin: 0.5rem auto;
+}
+
+.option input {
+    margin: 0;
+}
+
+.stats {
+    width: 410px;
+    margin: auto;
+    display: flex;
+}
+
+#writing-prompt {
+    width: 410px;
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+#writing-box {
+    margin: 0 0.2rem;
+}
+
+.stats p {
+    width: 50%;
+    margin: 0.5rem 0;
+}
+
+#objective {
+    width: 410px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.map {
+    outline: solid 2px black;
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+.country, .landform {
+    position: absolute;
+}
+
+.landform.inactive {
+    display: none;
+}
+
+.country:hover:not(.inactive), .landform:hover:not(.inactive) {
+    filter: sepia(1) saturate(10000%) hue-rotate(0deg);
+}
+
+.country.show-answer, .landform.show-answer {
+    filter: sepia(1) saturate(10000%) hue-rotate(-45deg);
+}
+
+.country.show-answer.small {
+    border: solid 1px black;
+}
+
+.country.correct, .landform.correct {
+    filter: sepia(1) saturate(10000%) hue-rotate(45deg) !important;
+}
+
+.country.incorrect, .landform.incorrect {
+    filter: sepia(1) saturate(10000%) hue-rotate(-70deg) !important;
+}
+
+.country.chosen, .landform.chosen {
+    filter: sepia(1) saturate(10000%) hue-rotate(0deg);
+}
+
+.country.small.chosen {
+    border: solid 1px black;
+}
+
+#answer {
+    width: 410px;
+    margin: auto;
+    text-align: center;
+    color: red;
+}
+
+dialog {
+    border-radius: 8px;
+}
+
+#mauritania {
+    left: 12;
+    top: 11;
+}
+
+#senegal {
+    left: 13;
+    top: 70;
+}
+
+#gambia {
+    left: 20;
+    top: 87;
+}
+
+#mali {
+    left: 40;
+    top: 23;
+}
+
+#guinea {
+    left: 28;
+    top: 94;
+}
+
+#burkina_faso {
+    left: 72;
+    top: 80;
+}
+
+#sierra_leone {
+    left: 36;
+    top: 110;
+}
+
+#liberia {
+    left: 44;
+    top: 118;
+}
+
+#ivory_coast {
+    left: 58;
+    top: 106;
+}
+
+#ghana {
+    left: 86;
+    top: 103;
+}
+
+#niger {
+    left: 102;
+    top: 32;
+}
+
+#togo {
+    left: 102;
+    top: 104;
+}
+
+#benin {
+    left: 105;
+    top: 97;
+}
+
+#nigeria {
+    left: 115;
+    top: 86;
+}
+
+#chad {
+    left: 166;
+    top: 32;
+}
+
+#cameroon {
+    left: 143;
+    top: 99;
+}
+
+#sudan {
+    left: 206;
+    top: 40;
+}
+
+#central_african_republic {
+    left: 171;
+    top: 103;
+}
+
+#south_sudan {
+    left: 215;
+    top: 97;
+}
+
+#eritrea {
+    left: 281;
+    top: 66;
+}
+
+#djibouti {
+    left: 307;
+    top: 95;
+}
+
+#ethiopia {
+    left: 265;
+    top: 83;
+}
+
+#gabon {
+    left: 143;
+    top: 151;
+}
+
+#republic_congo {
+    left: 155;
+    top: 143;
+}
+
+#somalia {
+    left: 301;
+    top: 97;
+}
+
+#drc {
+    left: 157;
+    top: 133;
+}
+
+#uganda {
+    left: 245;
+    top: 143;
+}
+
+#kenya {
+    left: 267;
+    top: 135;
+}
+
+#rwanda {
+    left: 245;
+    top: 173;
+}
+
+#burundi {
+    left: 247;
+    top: 180;
+}
+
+#tanzania {
+    left: 247;
+    top: 170;
+}
+
+#angola {
+    left: 157;
+    top: 197;
+}
+
+#zambia {
+    left: 206;
+    top: 212;
+}
+
+#malawi {
+    left: 263;
+    top: 221;
+}
+
+#namibia {
+    left: 157;
+    top: 261;
+}
+
+#botswana {
+    left: 197;
+    top: 266;
+}
+
+#zimbabwe {
+    left: 225;
+    top: 254;
+}
+
+#mozambique {
+    left: 250;
+    top: 224;
+}
+
+#south_africa {
+    left: 178;
+    top: 288;
+}
+
+#madagascar {
+    left: 310;
+    top: 232;
+}
+
+#congo_river {
+    left: 179;
+    top: 155;
+}
+
+#gulf_of_aden {
+    left: 315;
+    top: 73;
+}
+
+#gulf_of_guinea {
+    left: 62;
+    top: 129;
+}
+
+#lake_tanganyika {
+    left: 244;
+    top: 187;
+}
+
+#lake_victoria {
+    left: 258;
+    top: 163;
+}
+
+#mozambique_channel {
+    left: 260;
+    top: 232;
+}
+
+#niger_river {
+    left: 58;
+    top: 79;
+}
+
+#nile_river {
+    left: 245;
+    top: 0;
+}
+
+#red_sea {
+    left: 263;
+    top: 6;
+}
+
+#sahara_desert {
+    left: 18;
+    top: 0;
+}
