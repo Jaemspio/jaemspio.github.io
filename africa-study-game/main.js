@@ -375,6 +375,7 @@ for (let landform of landformsList) {
             answeredQuestion = true
         }
         if (landform.id === answerSet.landforms[questions[0]]) {
+            $(`#${answerSet[section][questions[0]]}`).removeClass("show-answer")
             questions.shift()
             $("#objective").text(`Click on the ${questions[0]}.`)
             if (!didAnswer) {
